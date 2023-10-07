@@ -40,26 +40,25 @@ array=("normal" "inverted" "right" "left")
 # Fazer um case para evitar erros de escrita
 if [[ "$var1" == 'y' ]]; then
 	read -p "Direção da rotação? [normal / inverted / right / left]: " var2
-for i in "${array[@]}"; do
-if [[ "$i" == "$var2" ]]; then
-	# create config no rotate
-	if [ -e "/etc/lightdm/lightdm.conf" ]; then
-	  mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
-	fi
+    for i in "${array[@]}"; do
+        if [[ "$i" == "$var2" ]]; then
+        # create config no rotate
+        if [ -e "/etc/lightdm/lightdm.conf" ]; then
+            mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
+        fi
 cat > /etc/lightdm/lightdm.conf << EOF
 [SeatDefaults]
 autologin-user=kiosk
 user-session=openbox
 display-setup-script=xrandr -o $var2
 EOF
-fi
-fi
-fi
+        fi
+    done
 else
-# create config no rotate
-if [ -e "/etc/lightdm/lightdm.conf" ]; then
-  mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
-fi
+    # create config no rotate
+    if [ -e "/etc/lightdm/lightdm.conf" ]; then
+    mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
+    fi
 cat > /etc/lightdm/lightdm.conf << EOF
 [SeatDefaults]
 autologin-user=kiosk
