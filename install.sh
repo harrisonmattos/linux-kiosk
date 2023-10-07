@@ -35,13 +35,13 @@ Section "ServerFlags"
 EndSection
 EOF
 
-read -p "Deseja habilitar a rotação da tela? [Y / N]: " var1
+read -p "Deseja habilitar a rotação da tela? [y / n]: " var1
 array=("normal" "inverted" "right" "left")
 # Fazer um case para evitar erros de escrita
 if [[ "$var1" == 'y' ]]; then
 	read -p "Direção da rotação? [normal / inverted / right / left]: " var2
-	if [[ ! -z "$var2" ]]; then
- 	if [[ ${array[@]} == "$var2" ]]
+for i in "${array[@]}"; do
+if [[ "$i" == "$var2" ]]; then
 	# create config no rotate
 	if [ -e "/etc/lightdm/lightdm.conf" ]; then
 	  mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
@@ -52,11 +52,10 @@ autologin-user=kiosk
 user-session=openbox
 display-setup-script=xrandr -o $var2
 EOF
-	fi
-	fi
-	fi
 fi
-
+fi
+fi
+else
 # create config no rotate
 if [ -e "/etc/lightdm/lightdm.conf" ]; then
   mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup
@@ -66,7 +65,7 @@ cat > /etc/lightdm/lightdm.conf << EOF
 autologin-user=kiosk
 user-session=openbox
 EOF
-
+fi
 
 # create autostart
 if [ -e "/home/kiosk/.config/openbox/autostart" ]; then
