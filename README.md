@@ -3,7 +3,7 @@
 Pequeno script de instalação para configurar um quiosque mínimo com Chromium para distribuições Linux baseadas em Debian. Este instalador é fortemente baseado nas excelentes [instruções de Will Haley](http://willhaley.com/blog/debian-fullscreen-gui-kiosk/).
 
 ## SO Base
-* Configure um Debian mínimo sem gerenciador de exibição, por exemplo Ubuntu netboot [amd64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso)
+* Configure um Ubuntu mínimo sem gerenciador de exibição, por exemplo Ubuntu netboot [amd64](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso)
 
 ## Grava ISO em USB
 * Os usuários de Windows/Mac podem gravar ISO híbrido em um dispositivo flash usando aplicativos especiais como Win32DiskImager ou Etcher.
