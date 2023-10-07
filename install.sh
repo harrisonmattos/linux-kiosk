@@ -13,14 +13,14 @@ apt-get install \
     locales \
     -y
 
-# dir
-mkdir -p /home/kiosk/.config/openbox
-
 # create group
 groupadd kiosk
 
 # create user if not exists
 id -u kiosk &>/dev/null || useradd -m kiosk -g kiosk -s /bin/bash 
+
+# dir
+mkdir -p /home/kiosk/.config/openbox
 
 # rights
 chown -R kiosk:kiosk /home/kiosk
