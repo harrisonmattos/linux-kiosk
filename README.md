@@ -18,7 +18,7 @@ sudo dd if=mini.iso of=/dev/sdb
 * Baixe este instalador, torne-o executável e execute-o
 
   ```concha
-  wget https://raw.githubusercontent.com/harrisonmattos/ubuntu-kiosk/main/install.sh; chmod +x install.sh; ./kiosk-install.sh
+  wget https://raw.githubusercontent.com/harrisonmattos/ubuntu-kiosk/main/install.sh; chmod +x install.sh; ./install.sh
   ```
 
 Se você estiver instalando em um Raspberry Pi, altere o chromium para chromium-browser no script de instalação (na linha apt e no comando de inicialização)
