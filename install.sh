@@ -5,7 +5,6 @@ apt-get update
 
 # get software
 apt-get install \
-    sudo \
     accountsservice \
     unclutter \
     xorg \
