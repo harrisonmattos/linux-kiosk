@@ -77,6 +77,11 @@ cat > /home/kiosk/.config/openbox/autostart << EOF
 
 unclutter -idle 0.1 -grab -root &
 
+# Comando para não bloquear a tela
+xset s off
+xset s noblank
+xset -dpms
+
 while :
 do
   xrandr --auto
