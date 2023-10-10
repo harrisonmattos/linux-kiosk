@@ -27,7 +27,7 @@ Se você estiver instalando em um Raspberry Pi, altere o chromium para chromium-
 Ele criará um `quiosque` de usuário normal, instalará o software (verifique o script) e configurará as configurações (fará backup dos existentes) para que, na reinicialização, o usuário do quiosque faça login automaticamente e execute o chromium no modo quiosque com um URL. Também ocultará o mouse.
 
 ## Altere o URL
-Altere o URL na parte inferior do script, onde diz https://neave.tv/
+Altere o URL na parte inferior do script, onde diz https://quiosque.informatche.com.br
 
 ## É seguro?
 Apesar de rodar como um usuário normal (e eu sugiro que você não deixe teclado e mouse por aí), haverá a possibilidade de plugin' em um mini teclado, abrindo um terminal e abrindo algumas coisas desagradáveis. Segurança é sua praia ;-)
