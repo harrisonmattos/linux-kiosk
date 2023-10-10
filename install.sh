@@ -94,7 +94,7 @@ do
     --disable-save-password-bubble \
     --disable-session-crashed-bubble \
     --incognito \
-    --kiosk "https://neave.tv/"
+    --kiosk "https://quiosque.informatche.com.br"
   sleep 5
 done &
 EOF
